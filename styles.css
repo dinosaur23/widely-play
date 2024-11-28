@@ -92,6 +92,12 @@ body {
   object-fit: fit;
 }
 
+.show-card iframe {
+  width: 100%;
+  height: auto%;
+  object-fit: fit;
+}
+
 .show-card h3 {
   font-size: 1.2rem;
   margin: 10px;
