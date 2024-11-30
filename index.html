@@ -90,5 +90,20 @@
     <p>&copy; 2025 Widely TV networks australia | All rights reserved.</p>
   </footer>
 
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const collapsible = document.querySelector(".collapsible");
+    const content = document.querySelector(".content");
+
+    collapsible.addEventListener("click", () => {
+      // Toggle the visibility of the content
+      content.style.display = content.style.display === "block" ? "none" : "block";
+
+      // Change button text to reflect state
+      collapsible.textContent = 
+        content.style.display === "block" ? "Hide Channel Details" : "View Channel Details";
+    });
+  });
+</script>
 </body>
 </html>
