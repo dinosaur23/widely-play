@@ -110,3 +110,35 @@ body {
   text-align: center;
   padding: 10px;
 }
+
+/* Collapsible Button */
+.collapsible {
+  background-color: #6200ea;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.collapsible:hover {
+  background-color: #4e00b7;
+}
+
+/* Collapsible Content */
+.content {
+  padding: 15px;
+  background-color: #f9f9f9;
+  display: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.content p {
+  margin: 10px 0;
+}
