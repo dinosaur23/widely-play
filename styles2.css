@@ -120,3 +120,12 @@ ul li a:hover {
   margin-top: 20px;
   font-size: 0.9rem;
 }
+
+.watch-now-btn {
+  padding: 10px 20px;
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
