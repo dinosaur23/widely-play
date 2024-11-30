@@ -129,3 +129,7 @@ ul li a:hover {
   font-size: 1rem;
   cursor: pointer;
 }
+
+.watch-now-btn:hover {
+  background-color: #d43d3d;
+}
