@@ -111,6 +111,13 @@ body {
   padding: 10px;
 }
 
+/* Info Section Padding */
+.info-section {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
 /* Collapsible Button */
 .collapsible {
   background-color: #6200ea;
@@ -124,6 +131,7 @@ body {
   font-size: 1.2rem;
   border-radius: 5px;
   margin-bottom: 10px;
+  box-sizing: border-box;
 }
 
 .collapsible:hover {
@@ -137,6 +145,7 @@ body {
   display: none;
   border: 1px solid #ddd;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .content p {
