@@ -164,35 +164,38 @@ code {
 /* Show Header Section */
 .show-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
   padding: 20px;
   margin: 20px auto;
-  max-width: 900px;
+  max-width: 1000px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .show-image img {
-  max-width: 300px;
+  max-width: 100%;
   height: auto;
+  width: 250px; /* Sets a fixed width for the image */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .show-info {
   flex: 1;
-  margin-left: 20px;
+  text-align: left;
 }
 
 .show-info h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 10px;
 }
 
 .show-info p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #666;
 }
 
@@ -221,6 +224,12 @@ code {
   margin: 10px;
   text-align: center;
 }
+
+.related-shows .show-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
 
 .related-shows .show-card img {
   width: 100%;
