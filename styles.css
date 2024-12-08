@@ -158,3 +158,67 @@ code {
   background-color: #f1f1f1;
   padding: 2px;
 }
+
+/* Show Page Styles */
+
+/* Header Section */
+.featured-show {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.show-info {
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+.show-info h1 {
+  font-size: 2.5rem;
+}
+
+.show-info p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Main Content Sections */
+.show-details, .show-times, .cast-and-crew, .related-content {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.show-details h2, .show-times h2, .cast-and-crew h2, .related-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.related-shows {
+  display: flex;
+  justify-content: space-around;
+}
+
+.related-shows .show-card {
+  width: 180px;
+  margin: 10px;
+  text-align: center;
+}
+
+.related-shows .show-card img {
+  width: 100%;
+  border-radius: 8px;
+}
