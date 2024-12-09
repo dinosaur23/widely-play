@@ -159,10 +159,6 @@ code {
   padding: 2px;
 }
 
-/* Show Page Styles */
-
-/* Show Page Styles */
-
 /* Main Container */
 .show-container {
   max-width: 800px;
@@ -183,11 +179,10 @@ code {
   margin-bottom: 20px;
 }
 
-.show-image {
-  width: 150px;
-  height: auto;
+.image-container img {
+  width: 200px; /* Fixed width to prevent oversizing */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 8px;
-  object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -238,12 +233,13 @@ ul li {
     align-items: center;
   }
 
-  .show-image {
+  .image-container img {
     width: 100%;
-    max-width: 300px;
+    max-width: 300px; /* Prevents oversized images */
   }
 
   .show-info {
     text-align: center;
   }
 }
+
