@@ -161,6 +161,8 @@ code {
 
 /* Show Page Styles */
 
+/* Show Page Styles */
+
 /* Show Header Section */
 .show-header {
   display: flex;
@@ -224,12 +226,6 @@ code {
   margin: 10px;
   text-align: center;
 }
-
-.related-shows .show-card img {
-  width: 100%;
-  border-radius: 8px;
-}
-
 
 .related-shows .show-card img {
   width: 100%;
