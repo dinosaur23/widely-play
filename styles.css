@@ -189,7 +189,6 @@ code {
   flex: 1;
   color: #333; /* Ensure dark text for readability */
   text-align: right;
-  float:right;
 }
 
 .show-info h1 {
