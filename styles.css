@@ -188,7 +188,8 @@ code {
 .show-info {
   flex: 1;
   color: #333; /* Ensure dark text for readability */
-  text-align: left;
+  text-align: right;
+  float:right;
 }
 
 .show-info h1 {
