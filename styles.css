@@ -152,6 +152,40 @@ body {
   margin: 10px 0;
 }
 
+/* Collapsible Button */
+.collapsible2 {
+  background-color: #6200ea;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.collapsible2:hover {
+  background-color: #4e00b7;
+}
+
+/* Collapsible Content */
+.content2 {
+  padding: 15px;
+  background-color: #f9f9f9;
+  display: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.content2 p {
+  margin: 10px 0;
+}
+
 code {
   font-family: Consolas,"courier new";
   color: crimson;
