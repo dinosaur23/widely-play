@@ -1,3 +1,8 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
 /* Overall Container */
 .show-container {
   max-width: 900px;
