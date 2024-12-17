@@ -12,7 +12,7 @@
 
 <div class="topnav" id="myTopnav">
   <a href="#home" class="active">Home</a>
-  <a href="#news">News</a>
+  <a href="https://widelynewsaus.blogspot.com/">News</a>
   <a href="#contact">Live TV</a>
   <a href="#about">Originals</a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -183,6 +183,15 @@
     });
   });
 
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 </script>
 </body>
 </html>
