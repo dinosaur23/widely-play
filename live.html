@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Guide</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>TV Guide</h1>
+  <table id="tv-guide">
+    <thead>
+      <tr>
+        <th>Channel</th>
+        <th>Time</th>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- TV guide data will be inserted here -->
+    </tbody>
+  </table>
+
+  <script>
+    async function loadTVGuide() {
+      const response = await fetch('tvguide.xml'); // Replace with your XML file path
+      const text = await response.text();
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(text, 'application/xml');
+
+      const channels = {};
+      const channelNodes = xml.querySelectorAll('channel');
+      channelNodes.forEach(channel => {
+        const id = channel.getAttribute('id');
+        const name = channel.querySelector('display-name').textContent;
+        channels[id] = name;
+      });
+
+      const programmeNodes = xml.querySelectorAll('programme');
+      const tbody = document.querySelector('#tv-guide tbody');
+
+      programmeNodes.forEach(programme => {
+        const channelID = programme.getAttribute('channel');
+        const start = formatTime(programme.getAttribute('start'));
+        const stop = formatTime(programme.getAttribute('stop'));
+        const title = programme.querySelector('title').textContent;
+        const description = programme.querySelector('desc').textContent;
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${channels[channelID] || 'Unknown Channel'}</td>
+          <td>${start} - ${stop}</td>
+          <td>${title}</td>
+          <td>${description}</td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    function formatTime(time) {
+      return `${time.slice(8, 10)}:${time.slice(10, 12)}`; // Extract HH:MM
+    }
+
+    loadTVGuide();
+  </script>
+</body>
+</html>
