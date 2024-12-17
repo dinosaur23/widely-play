@@ -3,79 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TV Guide</title>
-  <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-  </style>
+  <meta name="description" content="Live TV and Channel Guide">
+  <title>Live TV - Widely TV</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>TV Guide</h1>
-  <table id="tv-guide">
-    <thead>
-      <tr>
-        <th>Channel</th>
-        <th>Time</th>
-        <th>Title</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- TV guide data will be inserted here -->
-    </tbody>
-  </table>
+  <!-- Header Section -->
+  <header class="show-header">
+    <div class="banner">
+      <img src="live-tv-banner.jpg" alt="Live TV Banner" class="banner-image">
+      <div class="show-info-overlay">
+        <h1>Live TV</h1>
+        <p>Watch your favorite channels and check out the latest TV guide.</p>
+      </div>
+    </div>
+  </header>
 
-  <script>
-    async function loadTVGuide() {
-      const response = await fetch('http://192.168.0.100:8409/iptv/xmltv.xml'); // Replace with your XML file path
-      const text = await response.text();
-      const parser = new DOMParser();
-      const xml = parser.parseFromString(text, 'application/xml');
+  <!-- Channel Info Section -->
+  <main class="live-tv-content">
+    <section class="channel-info">
+      <h2>Channel Information</h2>
+      <div class="channel-list">
+        <!-- Channel Card -->
+        <div class="channel-card">
+          <h3>Widely TV</h3>
+          <p>Channel 10 (HD) | Channel 11 (SD)</p>
+          <p>Your flagship destination for live entertainment, news, and more.</p>
+        </div>
+        <div class="channel-card">
+          <h3>Widely Extra</h3>
+          <p>Channel 12 (HD)</p>
+          <p>Night-time exclusive events, movies, and premium content.</p>
+        </div>
+        <div class="channel-card">
+          <h3>Widely Family</h3>
+          <p>Channel 12 (HD)</p>
+          <p>Family-friendly shows during daytime hours.</p>
+        </div>
+        <div class="channel-card">
+          <h3>Widely Online</h3>
+          <p>Available for streaming</p>
+          <p>Access all channels live on our official member site.</p>
+        </div>
+      </div>
+    </section>
 
-      const channels = {};
-      const channelNodes = xml.querySelectorAll('channel');
-      channelNodes.forEach(channel => {
-        const id = channel.getAttribute('id');
-        const name = channel.querySelector('display-name').textContent;
-        channels[id] = name;
-      });
+    <!-- TV Guide Section -->
+    <section class="tv-guide">
+      <h2>TV Guide</h2>
+      <table class="guide-table">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Widely TV</th>
+            <th>Widely Extra</th>
+            <th>Widely Family</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5:00 AM - 7:00 AM</td>
+            <td>The Morning News</td>
+            <td>-</td>
+            <td>Kids Hour</td>
+          </tr>
+          <tr>
+            <td>7:00 AM - 12:00 PM</td>
+            <td>Daytime Talk Show</td>
+            <td>-</td>
+            <td>Family Movies</td>
+          </tr>
+          <tr>
+            <td>12:00 PM - 3:00 PM</td>
+            <td>Midday Special</td>
+            <td>-</td>
+            <td>Educational Programs</td>
+          </tr>
+          <tr>
+            <td>3:00 PM - 7:00 PM</td>
+            <td>Live Sports</td>
+            <td>-</td>
+            <td>Family Series</td>
+          </tr>
+          <tr>
+            <td>7:00 PM - 9:00 PM</td>
+            <td>Prime Time Drama</td>
+            <td>Exclusive Movie</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>9:00 PM - 12:00 AM</td>
+            <td>Late Night Show</td>
+            <td>Exclusive Series</td>
+            <td>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 
-      const programmeNodes = xml.querySelectorAll('programme');
-      const tbody = document.querySelector('#tv-guide tbody');
-
-      programmeNodes.forEach(programme => {
-        const channelID = programme.getAttribute('channel');
-        const start = formatTime(programme.getAttribute('start'));
-        const stop = formatTime(programme.getAttribute('stop'));
-        const title = programme.querySelector('title').textContent;
-        const description = programme.querySelector('desc').textContent;
-
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td>${channels[channelID] || 'Unknown Channel'}</td>
-          <td>${start} - ${stop}</td>
-          <td>${title}</td>
-          <td>${description}</td>
-        `;
-        tbody.appendChild(row);
-      });
-    }
-
-    function formatTime(time) {
-      return `${time.slice(8, 10)}:${time.slice(10, 12)}`; // Extract HH:MM
-    }
-
-    loadTVGuide();
-  </script>
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2025 Widely TV Networks | All rights reserved.</p>
+  </footer>
 </body>
 </html>
