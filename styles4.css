@@ -1,0 +1,108 @@
+/* All Shows Content */
+.all-shows-content {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Show Grid Layout */
+.show-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 shows per row */
+  gap: 20px;
+}
+
+.show-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.show-card img {
+  width: 100%;
+  height: 150px; /* Fixed image height for uniformity */
+  object-fit: cover;
+}
+
+.show-card h3 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.show-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Banner Styling */
+.show-header {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.show-info-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.show-info-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.show-info-overlay p {
+  font-size: 1.2rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+  .show-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 shows per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .show-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 shows per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .show-grid {
+    grid-template-columns: 1fr; /* 1 show per row */
+  }
+}
