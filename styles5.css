@@ -1,0 +1,32 @@
+/* Banner Styling */
+.show-header {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.show-info-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.show-info-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.show-info-overlay p {
+  font-size: 1.2rem;
+}
