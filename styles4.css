@@ -44,7 +44,7 @@ h2 {
 
 .show-card img {
   width: 100%;
-  height: ; /* Fixed image height for uniformity */
+  height: auto; /* Fixed image height for uniformity */
   object-fit: cover;
 }
 
