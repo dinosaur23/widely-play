@@ -178,3 +178,10 @@ h2 {
     text-align: left;
   }
 }
+
+code {
+  font-family: Consolas,"courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+}
