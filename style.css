@@ -32,6 +32,9 @@ background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#4747
 ul.list {
   list-style-type: decimal;
 }
+li.list {
+  background: none;
+}
   
   li {
     float: left;
