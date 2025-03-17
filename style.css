@@ -7,24 +7,20 @@
   padding: 20px;
     width: 800px;
   margin-inline: auto;
-   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+47,ededed+100;White+3D+%231 */
-background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
+   
     height:fit-content;
-    box-shadow: 3px 3px 2px;
+    
 }
 
 body {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a7cfdf+0,23538a+100;Blue+3d+%238 */
-background: linear-gradient(to bottom,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
+   
     font-family: Arial, sans-serif;
 }
 
 ul.navbar {
   margin-top: 0%;
-  margin-left: 0%;
-  margin-right: 0%;
+  
+ 
   margin-bottom: 0%;
     margin-inline: auto;
     
@@ -32,9 +28,7 @@ ul.navbar {
     
     padding: 0;
     overflow: hidden;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+39,2c2c2c+50,000000+51,111111+60,2b2b2b+76,1c1c1c+91,131313+100;Black+Gloss+%231 */
-background: linear-gradient(to bottom,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
+    background-color: #000000;
   }
 ul.list {
   list-style-type: decimal;
