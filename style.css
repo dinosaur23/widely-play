@@ -22,7 +22,9 @@ body {
 ul.navbar {
   margin-top: 0%;
   
- 
+ position: sticky;
+  top: 0;
+  
   margin-bottom: 0%;
     margin-inline: auto;
     
