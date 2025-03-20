@@ -94,3 +94,16 @@ div.scroll-container {
 div.scroll-container img {
   padding: 10px;
 }
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
