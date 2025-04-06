@@ -61,6 +61,9 @@ li.list {
   .active {
    background-color: #2d2d2e;
   }
+li a:hover {
+  background-color: #2d2d2e;
+}
 
   img.with-text {
   padding-right: 5px;
