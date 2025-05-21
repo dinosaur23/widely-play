@@ -110,3 +110,12 @@ div.scroll-container img {
   bottom: 8px;
   left: 16px;
 }
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid red;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px;
+}
