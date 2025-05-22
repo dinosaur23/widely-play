@@ -13,8 +13,9 @@
     
 }
 
+
 body {
-   
+   min-height: 100vh;
     font-family: "Bricolage Grotesque", sans-serif;
   color: white;
   background-color: #000000;
@@ -112,7 +113,10 @@ div.scroll-container img {
 }
 
 .center {
-  margin: auto;
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 50%;
   border: 2px solid red;
   background-color: white;
