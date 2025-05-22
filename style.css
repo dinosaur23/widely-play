@@ -2,6 +2,7 @@
 * {
   margin: 0%;
   padding: 0%;
+  box-sizing: border-box; /* Add this for better layout control */
 }
 .main {
   margin: 0px;
