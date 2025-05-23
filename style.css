@@ -130,7 +130,7 @@ div.scroll-container img {
 .center {
   /* Your existing styles for .center, but now centered by the .center-overlay flexbox */
   /* Remove absolute positioning and transform from .center, as the parent .center-overlay handles centering */
-  width: 50%;
+  width: 57%;
   max-width: 600px; /* Optional: Add a max-width to prevent it from getting too wide on large screens */
   border: 2px solid red;
   background-color: white;
